@@ -1,0 +1,4 @@
+include pcost/schema.sql
+graft pcost/static
+graft pcost/templates
+global-exclude *pyc
