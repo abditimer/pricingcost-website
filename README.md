@@ -1,4 +1,4 @@
-# Purchase Cost - the website
+# Purchase Cost - (website)
 
 Website that lets you know how much an item costs in Working Hours.
 
