@@ -1,69 +1,66 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <header>
-        <h1>Money to Hours.</h1>
-    </header>
-    <section>
+   <section>
         <!--first questions-->
         <form method="POST">
+            <!--
             <p>Salary <input type = "number" name = "salary_input" required/></p>
             <p>Hours <input type = "number" name = "hours_input" required/></p>
             <p>Purchase Cost <input type = "number" name = "purchase_cost_input" required/></p>
             <input type = "submit" name = "submit" /></p>
-        </form>
-        <br>
+            -->
+            <div>
+                <label class="label">Salary</label>
+                <div class="field has-addons">
+                    <p class="control">
+                        <span class="select">
+                        <select><option>£</option></select>
+                        </span>
+                    </p>
+                    <p class="control">
+                        <input class="input" type="number" name="salary_input" placeholder="Yearly Salary">
+                    </p>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Hours Worked per Week</label>
+                <div class="control">
+                    <input class="input" type="number" name="hours_input" placeholder="Hours per Week">
+                </div>
+            </div>
         
+            <div>
+                <label class="label">Purchase</label>
+                <div class="field has-addons">
+                    <p class="control">
+                        <span class="select">
+                        <select>
+                            <option>£</option>
+                        </select>
+                        </span>
+                    </p>
+                    <p class="control">
+                        <input class="input" type="number" name="purchase_cost_input" placeholder="Cost of item you wish to purchase">
+                    </p>
+                </div>   
+            </div>
+        
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" name="submit">Submit</button>
+                </div>
+            </div>
+        </form>
     </section>
-    <h1>PER HOUR WAGE: {{ text_1 }}</h1>
-    <h1>Cost of Item in hours: {{ text_2 }}</h1>
+    <section>
+        <h1>PER HOUR WAGE: {{ text_1 }}</h1>
+        <h1>Cost of Item in hours: {{ text_2 }}</h1>
+    </section>
 
-
-    <div>
-        <label class="label">Salary</label>
-        <div class="field has-addons">
-            <p class="control">
-                <span class="select">
-                <select>
-                    <option>£</option>
-                </select>
-                </span>
-            </p>
-            <p class="control">
-                <input class="input" type="text" placeholder="Yearly Salary">
-            </p>
-        </div>
-    </div>
-
-    <div class="field">
-        <label class="label">Hours Worked per Week</label>
-        <div class="control">
-            <input class="input" type="text" placeholder="Hours per Week">
-        </div>
-    </div>
-
-    <div>
-        <label class="label">Purchase</label>
-        <div class="field has-addons">
-            <p class="control">
-                <span class="select">
-                <select>
-                    <option>£</option>
-                </select>
-                </span>
-            </p>
-            <p class="control">
-                <input class="input" type="text" placeholder="Cost of item you wish to purchase">
-            </p>
-        </div>   
-    </div>
-
-    <div class="field">
-        <div class="control">
-            <button class="button is-primary">Submit</button>
-        </div>
-    </div>
+        
 
     <!---->
+    
   
 {% endblock %}
