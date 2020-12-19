@@ -41,7 +41,7 @@ def index():
             )
             db.commit()
             # render calcs
-            return render_template('purchasecost/index.html', text_1=str(round(per_hour)), text_2=str(round(per_hour_cost)))
+            return render_template('purchasecost/index.html', text_1=str(round(per_hour)), text_2=str(round(per_hour_cost)), scroll='something')
     else:
         return render_template('purchasecost/index.html')
 
